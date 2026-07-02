@@ -13,56 +13,56 @@ const skills = [
   },
 ];
 
-const projects = [
-  {
-    index: "01",
-    title: "HDFC Web Application",
-    category: "Enterprise · Fintech",
-    description:
-      "Frontend implementation for an enterprise-level web application built for a major financial institution, built strictly to brand and accessibility standards.",
-    bullets: [
-      "Contributed to UI/UX design and frontend implementation",
-      "Built a reusable component library to keep every screen pixel-consistent with brand guidelines",
-    ],
-    tags: ["React", "TypeScript", "Tailwind CSS"],
-  },
-  {
-    index: "02",
-    title: "Sports Timing Solutions",
-    category: "Production · Live Data",
-    description:
-      "A marathon organization platform used to run races across India and internationally, with live participant and race-timing data.",
-    bullets: [
-      "Architected modular React components for event listings, dashboards, and race views",
-      "Integrated REST APIs to dynamically fetch and display live race data",
-    ],
-    tags: ["React", "REST API", "Component Architecture"],
-  },
-  {
-    index: "03",
-    title: "Motorola — Web & Mobile",
-    category: "Cross-Platform",
-    description:
-      "A companion mobile application built alongside a web client, sharing logic across platforms to speed up delivery.",
-    bullets: [
-      "Built cross-platform mobile screens using React Native",
-      "Shared business logic between web and mobile to avoid duplicated code",
-    ],
-    tags: ["React Native", "TypeScript", "Tailwind CSS"],
-  },
-  {
-    index: "04",
-    title: "PadCare Web App",
-    category: "Dashboards",
-    description:
-      "Dashboard and informational modules for end users, with a focus on clarity and frontend performance.",
-    bullets: [
-      "Collaborated cross-functionally to improve design clarity",
-      "Built responsive UI components powering core dashboard modules",
-    ],
-    tags: ["React", "Responsive Design"],
-  },
-];
+// const projects = [
+//   {
+//     index: "01",
+//     title: "HDFC Web Application",
+//     category: "Enterprise · Fintech",
+//     description:
+//       "Frontend implementation for an enterprise-level web application built for a major financial institution, built strictly to brand and accessibility standards.",
+//     bullets: [
+//       "Contributed to UI/UX design and frontend implementation",
+//       "Built a reusable component library to keep every screen pixel-consistent with brand guidelines",
+//     ],
+//     tags: ["React", "TypeScript", "Tailwind CSS"],
+//   },
+//   {
+//     index: "02",
+//     title: "Sports Timing Solutions",
+//     category: "Production · Live Data",
+//     description:
+//       "A marathon organization platform used to run races across India and internationally, with live participant and race-timing data.",
+//     bullets: [
+//       "Architected modular React components for event listings, dashboards, and race views",
+//       "Integrated REST APIs to dynamically fetch and display live race data",
+//     ],
+//     tags: ["React", "REST API", "Component Architecture"],
+//   },
+//   {
+//     index: "03",
+//     title: "Motorola — Web & Mobile",
+//     category: "Cross-Platform",
+//     description:
+//       "A companion mobile application built alongside a web client, sharing logic across platforms to speed up delivery.",
+//     bullets: [
+//       "Built cross-platform mobile screens using React Native",
+//       "Shared business logic between web and mobile to avoid duplicated code",
+//     ],
+//     tags: ["React Native", "TypeScript", "Tailwind CSS"],
+//   },
+//   {
+//     index: "04",
+//     title: "PadCare Web App",
+//     category: "Dashboards",
+//     description:
+//       "Dashboard and informational modules for end users, with a focus on clarity and frontend performance.",
+//     bullets: [
+//       "Collaborated cross-functionally to improve design clarity",
+//       "Built responsive UI components powering core dashboard modules",
+//     ],
+//     tags: ["React", "Responsive Design"],
+//   },
+// ];
 
 export default function Home() {
   return (
@@ -162,7 +162,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="mx-auto max-w-6xl px-6 py-16">
+      {/* <section id="projects" className="mx-auto max-w-6xl px-6 py-16">
         <p className="font-mono text-[13px] uppercase tracking-[0.28em] text-gold">
           Projects
         </p>
@@ -174,7 +174,7 @@ export default function Home() {
             <ProjectCard key={p.index} {...p} />
           ))}
         </div>
-      </section>
+      </section> */}
 
       <section id="contact" className="border-t border-line/70 bg-navyDeep text-paper">
         <div className="mx-auto max-w-6xl px-6 py-16">
