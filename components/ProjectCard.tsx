@@ -16,17 +16,17 @@ export default function ProjectCard({
   tags,
 }: ProjectCardProps) {
   return (
-    <article className="group relative rounded-lg border border-line bg-white/60 p-7 transition-all hover:-translate-y-0.5 hover:border-gold/60 hover:shadow-[0_18px_40px_-25px_rgba(18,33,63,0.45)]">
-      <div className="mb-4 flex items-start justify-between gap-4">
+    <article className="project-card group rounded-[22px] border border-line/70 bg-gradient-to-br from-white/85 via-white/70 to-white/50 p-7 shadow-[0_12px_40px_-20px_rgba(18,33,63,0.25)]">
+      <div className="mb-5 flex items-start justify-between gap-4">
         <div>
-          <span className="font-mono text-[11px] uppercase tracking-widest text-signal">
+          <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-signal">
             {category}
           </span>
-          <h3 className="mt-1 font-display text-xl font-semibold text-ink">
+          <h3 className="mt-2 font-display text-xl font-semibold text-ink">
             {title}
           </h3>
         </div>
-        <span className="font-mono text-3xl font-semibold text-line group-hover:text-gold/50 transition-colors">
+        <span className="rounded-full border border-gold/20 bg-gold/10 px-3 py-2 font-mono text-lg font-semibold text-gold/70 transition-colors group-hover:text-gold">
           {index}
         </span>
       </div>
@@ -36,17 +36,17 @@ export default function ProjectCard({
       <ul className="mt-4 space-y-2">
         {bullets.map((b) => (
           <li key={b} className="flex gap-2 text-[13.5px] leading-snug text-ink/70">
-            <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold" />
+            <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
             {b}
           </li>
         ))}
       </ul>
 
-      <div className="mt-5 flex flex-wrap gap-2">
+      <div className="mt-6 flex flex-wrap gap-2">
         {tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-full border border-navy/15 bg-navy/5 px-3 py-1 font-mono text-[11px] text-navy"
+            className="rounded-full border border-navy/15 bg-navy/5 px-3 py-1 font-mono text-[11px] font-medium text-navy transition-transform group-hover:-translate-y-0.5"
           >
             {tag}
           </span>
