@@ -82,10 +82,10 @@ export default function Home() {
             <span className="dot bg-[#febc2e]" />
             <span className="dot bg-[#28c840]" />
             <span className="ml-3 font-mono text-[12px] text-white/40">
-              developer.tsx
+              Portfolio.tsx
             </span>
           </div>
-          <div className="px-6 py-12 sm:px-10 sm:py-16">
+          <div className="px-6 py-12 sm:px-10 sm:py-8">
             <p className="font-mono text-[13px] text-signal">
               // frontend developer
             </p>
