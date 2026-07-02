@@ -66,10 +66,15 @@ const projects = [
 
 export default function Home() {
   return (
-    <main id="top" className="bg-paper">
+    <main id="top" className="relative overflow-hidden bg-paper">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="hero-orb left-[8%] top-[10%] h-32 w-32 bg-gold/20" />
+        <div className="hero-orb hero-orb--2 right-[8%] top-[18%] h-40 w-40 bg-[#12213f]/10" />
+        <div className="hero-orb hero-orb--3 bottom-[12%] left-[45%] h-24 w-24 bg-[#f0c36b]/20" />
+      </div>
+
       <Navbar />
 
-      {/* HERO */}
       <section className="mx-auto max-w-5xl px-6 pb-20 pt-16 sm:pt-24">
         <div className="editor-frame">
           <div className="editor-titlebar">
@@ -113,27 +118,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section id="about" className="mx-auto max-w-5xl px-6 py-16">
-        <p className="font-mono text-[13px] uppercase tracking-widest text-gold">
-          About
-        </p>
-        <h2 className="mt-3 font-display text-2xl font-semibold text-ink sm:text-3xl">
-          What I do
-        </h2>
-        <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-ink/70">
-          I&apos;m a Frontend Developer with hands-on experience building
-          responsive, high-performance web and mobile applications for
-          enterprise clients. I care about clean component architecture,
-          pixel-accurate implementation, and interfaces that hold up under
-          real production use — not just in a demo.
-        </p>
+      <section id="about" className="mx-auto max-w-6xl px-6 py-16">
+        <div className="rounded-[28px] border border-line/70 bg-white/65 p-8 shadow-[0_20px_70px_-35px_rgba(18,33,63,0.28)] backdrop-blur sm:p-10">
+          <p className="font-mono text-[13px] uppercase tracking-[0.28em] text-gold">
+            About
+          </p>
+          <h2 className="mt-3 font-display text-2xl font-semibold text-ink sm:text-3xl">
+            What I do
+          </h2>
+          <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-ink/70">
+            I&apos;m a Frontend Developer with hands-on experience building
+            responsive, high-performance web and mobile applications for
+            enterprise clients. I care about clean component architecture,
+            pixel-accurate implementation, and interfaces that hold up under
+            real production use — not just in a demo.
+          </p>
+        </div>
       </section>
 
-      {/* SKILLS */}
-      <section id="skills" className="border-y border-line bg-white/50">
-        <div className="mx-auto max-w-5xl px-6 py-16">
-          <p className="font-mono text-[13px] uppercase tracking-widest text-gold">
+      <section id="skills" className="border-y border-line/70 bg-white/50">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <p className="font-mono text-[13px] uppercase tracking-[0.28em] text-gold">
             Skills
           </p>
           <h2 className="mt-3 font-display text-2xl font-semibold text-ink sm:text-3xl">
@@ -143,9 +148,9 @@ export default function Home() {
             {skills.map((s) => (
               <div
                 key={s.label}
-                className="rounded-lg border border-line bg-paper p-5"
+                className="rounded-[20px] border border-line/70 bg-white/75 p-6 shadow-[0_12px_40px_-24px_rgba(18,33,63,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_-26px_rgba(18,33,63,0.4)]"
               >
-                <p className="font-mono text-[11px] uppercase tracking-widest text-navy/60">
+                <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-navy/60">
                   {s.label}
                 </p>
                 <p className="mt-2 text-[14.5px] leading-relaxed text-ink/80">
@@ -157,47 +162,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROJECTS */}
-      <section id="projects" className="mx-auto max-w-5xl px-6 py-16">
-        <p className="font-mono text-[13px] uppercase tracking-widest text-gold">
+      <section id="projects" className="mx-auto max-w-6xl px-6 py-16">
+        <p className="font-mono text-[13px] uppercase tracking-[0.28em] text-gold">
           Projects
         </p>
         <h2 className="mt-3 font-display text-2xl font-semibold text-ink sm:text-3xl">
           Things I&apos;ve built
         </h2>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+        <div className="mt-8 grid gap-6 lg:grid-cols-2">
           {projects.map((p) => (
             <ProjectCard key={p.index} {...p} />
           ))}
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section
-        id="contact"
-        className="border-t border-line bg-navyDeep text-paper"
-      >
-        <div className="mx-auto max-w-5xl px-6 py-16">
-          <p className="font-mono text-[13px] uppercase tracking-widest text-gold">
+      <section id="contact" className="border-t border-line/70 bg-navyDeep text-paper">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <p className="font-mono text-[13px] uppercase tracking-[0.28em] text-gold">
             Contact
           </p>
           <h2 className="mt-3 font-display text-2xl font-semibold sm:text-3xl">
             Let&apos;s work together
           </h2>
-          <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-white/60">
+          <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-white/60">
             I&apos;m open to frontend and full-stack opportunities. The
             fastest way to reach me is email.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 font-mono text-[13px]">
             <a
               href="mailto:sadamyuvanth@gmail.com"
-              className="rounded-md bg-gold px-5 py-2.5 font-medium text-navyDeep transition-opacity hover:opacity-90"
+              className="rounded-full bg-gold px-5 py-2.5 font-semibold text-navyDeep transition-transform hover:-translate-y-0.5 hover:opacity-90"
             >
               sadamyuvanth@gmail.com
             </a>
             <a
               href="tel:+918652420386"
-              className="rounded-md border border-white/20 px-5 py-2.5 text-white/80 transition-colors hover:border-white/40 hover:text-white"
+              className="rounded-full border border-white/20 px-5 py-2.5 text-white/80 transition-all hover:-translate-y-0.5 hover:border-white/40 hover:text-white"
             >
               +91 86524 20386
             </a>
@@ -205,7 +205,7 @@ export default function Home() {
               href="https://linkedin.com/in/yuvanth-sadam"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md border border-white/20 px-5 py-2.5 text-white/80 transition-colors hover:border-white/40 hover:text-white"
+              className="rounded-full border border-white/20 px-5 py-2.5 text-white/80 transition-all hover:-translate-y-0.5 hover:border-white/40 hover:text-white"
             >
               linkedin
             </a>
@@ -213,14 +213,11 @@ export default function Home() {
               href="https://github.com/Yuvanthsadam"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md border border-white/20 px-5 py-2.5 text-white/80 transition-colors hover:border-white/40 hover:text-white"
+              className="rounded-full border border-white/20 px-5 py-2.5 text-white/80 transition-all hover:-translate-y-0.5 hover:border-white/40 hover:text-white"
             >
               github
             </a>
           </div>
-        </div>
-        <div className="border-t border-white/10 px-6 py-6 text-center font-mono text-[11px] text-white/30">
-          built with next.js &amp; tailwind css
         </div>
       </section>
     </main>
